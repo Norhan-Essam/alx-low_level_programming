@@ -2,29 +2,30 @@
 #include <time.h>
 #include <stdio.h>
 
+
 /**
- * main - Prints a text according number
- * Return: Always (Success)
+ * main - entry point
  *
+ * Description: print the value of n status:
+ *	greater than, is zero and is not less than 6.
+ *
+ * Return: 0 (success)
 */
 
 int main(void)
-
 {
-
-	int n, lasted;
+	int n, digit;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	lasted = n % 10;
+	digit = n % 10;
 
-	if (lasted > 5)
-	{
-	printf("Last digit of %d is %d and is greater than 5\n", n, lasted);
-	}
-	else if (lasted < 6 && lasted != 0)
-	{
-	printf("Last digit of %d is %d and is less than 6 and not 0\n", n, lasted);
-	}
+	if (digit > 5)
+		printf("Last digit of %i is %i and is greater than 5\n", n, digit);
+	else if (digit == 0)
+		printf("Last digit of %i is %i and is  0\n", n, digit);
+	else if (digit < 6 && digit != 0)
+		printf("Last digit of %i  is %i  and is less than 6 and not 0\n", n, digit);
 	return (0);
 }
+
