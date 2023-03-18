@@ -14,10 +14,10 @@ int main(void)
 
 	while (ch >= 'a')
 	{
-		 char* (ch);
+		putchar(ch);
 		ch--;
 	}
-	 char* ('\n');
+	putchar('\n');
 
-	return (0);
+	retutn (0);
 }
