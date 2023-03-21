@@ -1,26 +1,26 @@
 #include <stdio.h>
 
 /**
- * print_sign - Prints the sign of a number
- * @n: The number to be checked
- * Return: 1 for positive num, -1 for negative num or zero for anything else
+ * print_sign -> prints sign based on condition
+ * @n: argument passed
+ * Return: 1, 0, -1
 */
 
 int print_sign(int n)
 {
 	if (n > 0)
 	{
-	putchar(43);
-	return (1);
+		putchar('+');
+		return (1);
 	}
-	else if (n < 0)
+	else if (n == 0)
 	{
-	putchar(45);
-	return (-1);
+		putchar('0');
+		return (0);
 	}
 	else
 	{
-	putchar(48);
-	return (0);
+		putchar('-');
+		return (-1);
 	}
 }
