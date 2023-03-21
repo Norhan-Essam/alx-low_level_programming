@@ -1,7 +1,7 @@
-#include <stdio.h>
+#include <main.h>
 
 /**
- * print_sign - Print the sign of a number
+ * print_sign - Prints the sign of a number
  * @n: The number to be checked
  * Return: 1 for positive num, -1 for negative num or zero for anything else
 */
@@ -10,17 +10,17 @@ int print_sign(int n)
 {
 	if (n > 0)
 	{
-	putchar(43);
+	_putchar(43);
 	return (1);
 	}
 	else if (n < 0)
 	{
-	putchar(45);
+	_putchar(45);
 	return (-1);
 	}
 	else
 	{
-	putchar(48);
+	_putchar(48);
 	return (0);
 	}
 }
