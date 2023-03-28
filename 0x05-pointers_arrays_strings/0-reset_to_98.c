@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * reset_to_90 - takes a pointer to an int paramotor
+ * reset_to_98 - takes a pointer to an int paramotor
  * and updates the value it points to 98
  *
  * @n: int paramotor
