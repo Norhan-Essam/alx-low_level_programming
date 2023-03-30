@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <ctype.h>
 
 /**
  * islower - determines whether ascii is lowercase
@@ -7,10 +8,11 @@
  * Return: 1 if true, 0 if false
 */
 
-int islower(char c)
+int isLower(char c);
 {
 	return (c >= 97 && c <= 122);
 }
+
 
 /**
  * isDelimiter - determines whether ascii is a delimiter
@@ -44,7 +46,7 @@ char *cap_string(char *s)
 	{
 		if (isDelimiter(*s))
 			foundDelimit = 1;
-		else if (isLower(*s) && foundDelimit)
+		else if (islower(*s) && foundDelimit)
 		{
 			*s -= 32;
 			foundDelimit = 0;
