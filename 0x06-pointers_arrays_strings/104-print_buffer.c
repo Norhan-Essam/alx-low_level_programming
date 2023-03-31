@@ -28,7 +28,7 @@ void printHexes(char *b, int start, int end)
 	while (i < 10)
 	{
 		if (i < end)
-			printf("%02x", *(b + start +i));
+			printf("%02x", *(b + start + i));
 		else
 			printf(" ");
 		if (i % 2)
@@ -56,7 +56,7 @@ void printASCII(char *b, int start, int end)
 		if (!isPrintableASCII(ch))
 			ch = 46;
 		printf("%c", ch);
-		i++:
+		i++;
 	}
 }
 
@@ -77,11 +77,11 @@ void print_buffer(char *b, int size)
 		for (start = 0; start < size; start += 10)
 		{
 			end = (size - start < 10) ? size - start : 10;
-			printf("%08x: ", start);
+			printf("%08x : ", start);
 			printHexes(b, start, end);
 			printASCII(b, start, end);
 			printf("\n");
 		}
-	}else
+	} else
 		printf("\n");
 }
