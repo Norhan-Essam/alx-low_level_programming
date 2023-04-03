@@ -10,11 +10,12 @@
 
 char *_memest(char *s, char a, unsigned int n)
 {
-	unsigned int i;
+	unsigned int m;
 
-	for (i = 0; i < n; i++);
+	for (m = 0; n > 0; m++, n--);
 	{
-		s[i] = a;
+		s[m] = a;
 	}
+
 	return (s);
 }
