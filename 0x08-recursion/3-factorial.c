@@ -3,10 +3,10 @@
 /**
  * factorial - finds factorial
  * @m: int
- * Retuen: int
+ * Return: int
 */
 
-int factorial (int m)
+int factorial(int m)
 {
 
 if (m < 0)
