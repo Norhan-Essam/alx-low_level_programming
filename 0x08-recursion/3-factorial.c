@@ -19,6 +19,6 @@ else if (m == 0)
 
 }
 
-return (n * factorial(m - 1));
+return (m * factorial(m - 1));
 
 }
