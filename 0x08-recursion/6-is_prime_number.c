@@ -15,7 +15,7 @@ return (check_prime(m, 2));
 }
 
 /**
- * check_prime - check all number <  m if they can divide it
+ * _check_prime - check all number   m if they can divide it
  * @m: int
  * @othrn: int
  * @Return: int
