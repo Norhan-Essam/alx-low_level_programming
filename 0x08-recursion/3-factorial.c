@@ -6,7 +6,7 @@
  * Retuen: int
 */
 
-int factorial(int m)
+int factorial (int m)
 {
 
 if (m < 0)
