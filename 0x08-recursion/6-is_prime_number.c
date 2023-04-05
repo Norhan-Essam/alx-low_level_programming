@@ -3,7 +3,7 @@
 
 /**
  * is_prime_number - check if m is a prime number
- * @othrn:int
+ * @othrn: int
  * @m: int
  * Return: 0 or 1
 */
