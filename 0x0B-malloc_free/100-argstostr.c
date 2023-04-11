@@ -17,14 +17,14 @@ int _strlen(char *s)
 }
 
 /**
- * *argstr - description
+ * *argstostr - description
  * @ac: int
  * @av: arguments
  * Return: string
 */
 
 
-char *argstr(int ac, char **av)
+char *argstostr(int ac, char **av)
 {
 	int a = 0, nc = 0, e = 0, cmpt = 0;
 	char *s;
