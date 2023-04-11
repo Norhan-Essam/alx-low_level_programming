@@ -49,7 +49,7 @@ char **strtow(char *str)
 	{
 		if (str[a] != ' ' && (a == 0 || str[a - 1] == ' '))
 		{
-			for (e = 1; str[a + e] != ' ' str[a + e]; e++)
+			for (e = 1; str[a + e] != ' '; str[a + e]; e++)
 				;
 			e++;
 			w[wc] = (char *)malloc(e * sizeof(char));
