@@ -8,7 +8,7 @@
  * Return: c
 */
 
-char *_memset(char *c, char a, unsigned m)
+char *_memset(char *c, char a, unsigned int m)
 {
 	char *ptr = c;
 
