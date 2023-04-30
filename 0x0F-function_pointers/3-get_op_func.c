@@ -6,7 +6,7 @@
  *
  * Return: the right function pointer
 */
-int (get_op_func(char *z))(int, int)
+int (*get_op_func(char *z))(int, int)
 {
 	op_t ops[] = {
 	 {"+", op_add},
@@ -21,7 +21,7 @@ int i = 0;
 while (i < 5)
 {
 	if (z && z[0] == ops[i].op[0] && !z[1])
-	return (ops[i].f);
+		return (ops[i].f);
 	i++;
 }
 return (NULL);
