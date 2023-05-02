@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "list.h"
 
 /**
  * listint_len - prints a linked list
