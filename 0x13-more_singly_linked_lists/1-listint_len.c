@@ -1,12 +1,12 @@
-#include "list.h"
+#include "lists.h"
 
 /**
- * list_len - determines length of linked list
+ * listint_len - prints a linked list
  * @d: pointer to first node
  *
  * Return: size of list
 */
-size_t list_len(const list_t *d)
+size_t listint_len(const listint_t *d)
 {
 	size_t e = 0;
 

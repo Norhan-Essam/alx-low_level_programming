@@ -1,4 +1,4 @@
-#include "lists.h"
+#include "list.h"
 
 /**
  * print_listint - prints a linked lists
@@ -12,7 +12,7 @@ size_t print_listint(const listint_t *d)
 
 	while (d)
 	{
-		printf("%d\n", d->n);
+		printf("%d\n", d->m);
 		d = d->next;
 		e++;
 	}
