@@ -15,19 +15,19 @@ return (check_prime(m, 2));
 }
 
 /**
- * check_prime - check all number c  m if they can divide it
- * @m: int
+ * check_prime - check all number <  n if they can divide it
+ * @n: int
  * @othrn: int
  * @Return: int
 */
 
-int check_prime(int m, int othrn)
+int check_prime(int n, int othrn)
 {
 
-if (othrn >= m && m > 1)
+if (othrn >= n && n > 1)
 	return (1);
-else if (m % othrn == 0 || m <= 1)
+else if (n % othrn == 0 || n <= 1)
 	return (0);
 else
-	return (check_prime(m, othrn + 1));
+	return (check_prime(n, othrn + 1));
 }

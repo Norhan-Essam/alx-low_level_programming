@@ -36,7 +36,7 @@ return (check(n, 0, end - 1, end % 2));
  * @start: int moves from right to left
  * @end: int moves from left to right
  * @mod: int
- * @Return: 0 or 1
+ * Return: 0 or 1
 */
 
 int check(char *n, int start, int end, int mod)
