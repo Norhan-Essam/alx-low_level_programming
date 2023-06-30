@@ -19,15 +19,15 @@ int _strlen(char *d)
 
 /**
  * print_list - prints a linked lists
- * @q: pointer to first node
+ * @d: pointer to first node
  *
  * Return: size of list
 */
-size_t print_list(const list_t *q)
+size_t print_list(const list_t *d)
 {
 	size_t e = 0;
 
-	while (q)
+	while (d)
 	{
 		printf("[%d] %s\n", _strlen(d->str), d->str ? d->str : "(nil)");
 		d = d->next;
