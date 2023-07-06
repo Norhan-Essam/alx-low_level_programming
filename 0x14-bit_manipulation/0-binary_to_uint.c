@@ -2,21 +2,21 @@
 
 /**
  * binary_to_unit - converts a binary number string to unsigned int
- * @b: the binary number as a string
+ * @n: the binary number as a string
  *
- * Return: the unsigned int form of b
+ * Return: the unsigned int form of n
 */
-unsigned int binary_to_unit(const char *b)
+unsigned int binary_to_unit(const char *n)
 {
 	unsigned int num = 0;
 
-	if (!b)
+	if (!n)
 		return (0);
-	while (*b)
+	while (*n)
 	{
-		if (*b != '0' && *b != '1')
+		if (*n != '0' && *n != '1')
 			return (0);
-		num = num * 2 + (*b++ - '0');
+		num = num * 2 + (*n++ - '0');
 	}
 	return (num);
 }
