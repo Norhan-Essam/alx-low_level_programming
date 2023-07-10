@@ -9,11 +9,11 @@ void print_osabi_more(Elf64_Ehdr h);
 */
 void print_magic(Elf64_Ehdr h)
 {
-	int e;
+	int i;
 
 	printf(" Magic:	    ");
-	for (e = 0; e < EI_NIDENT; e++)
-		printf("%2.2x%s", h.e_ident[e], e == EI_NIDENT - 1 ? "\n" : " ");
+	for (i = 0; i < EI_NIDENT; i++)
+		printf("%2.2x%s", h.e_ident[i], i == EI_NIDENT - 1 ? "\n" : " ");
 }
 
 /**
@@ -163,13 +163,13 @@ void print_abiversion(Elf64_Ehdr h)
 */
 void print_type(Elf64_Ehdr h)
 {
-	char *b = (char *)&h.e_type;
-	int e = 0;
+	char *p = (char *)&h.e_type;
+	int i = 0;
 
 	printf("  Type:				");
 	if (h.e_ident[EI_DATA] == ELFDATA2MSB)
-		e = 1;
-	switch (b[e])
+		i = 1;
+	switch (p[i])
 	{
 		case ET_NONE:
 			printf("NONE (NONE)");
@@ -187,7 +187,7 @@ void print_type(Elf64_Ehdr h)
 			printf("CORE (Core file)");
 			break;
 		default:
-			printf("<unknown>: %x", b[e]);
+			printf("<unknown>: %x", p[i]);
 		break;
 	}
 	printf("\n");
@@ -199,29 +199,29 @@ void print_type(Elf64_Ehdr h)
 */
 void print_entry(Elf64_Ehdr h)
 {
-	int e = 0, len = 0;
-	unsigned char *b = (unsigned char *)&h.e_entry;
+	int i = 0, len = 0;
+	unsigned char *p = (unsigned char *)&h.e_entry;
 
 	printf("  Entry point address:			0x");
 	if (h.e_ident[EI_DATA] != ELFDATA2MSB)
 	{
-		e = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
-		while (!b[e])
-			e--;
-		printf("%x", b[e--]);
-		for (; e >= 0; e--)
-			printf("%02x", b[e]);
+		i = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
+		while (!p[i])
+			i--;
+		printf("%x", p[i--]);
+		for (; i >= 0; i--)
+			printf("%02x", p[i]);
 		printf("\n");
 	}
 	else
 	{
-		e = 0;
+		i = 0;
 		len = h.e_ident[EI_CLASS] == ELFCLASS64 ? 7 : 3;
-		while (!b[e])
-			e++;
-		printf("%x", b[e++]);
-		for (; e <= len; e++)
-			printf("%02x", b[e]);
+		while (!p[i])
+			i++;
+		printf("%x", p[i++]);
+		for (; i <= len; i++)
+			printf("%02x", p[i]);
 		printf("\n");
 	}
 }
